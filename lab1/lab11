@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int arr[]={23,34,54,19,16,2};
+
+int n=sizeof(arr)/sizeof(arr[0]);
+int temp;
+int main(){
+    for(int i=0;i<n-1; i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i]>arr[j]){
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    printf("sorted elements:");
+    for(int i=0;i<n;i++){
+        printf("%d,",arr[i]);
+    }
+    printf("\nSecond smallest element in array is:%d",arr[1]);
+    printf("\nSecond largest element in array is:%d",arr[n-2]);
+}			
